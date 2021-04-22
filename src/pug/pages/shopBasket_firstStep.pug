@@ -1,0 +1,70 @@
+extends ../layout/base
+
+block content 
+    .shopBasket-firstStep
+        .wrapper 
+            p.shopBasket-firstStep__title Корзина
+            .shopBasket-firstStep__delivery-options
+                .shopBasket-firstStep__buttons 
+                    .shopBasket-firstStep__delivery-button.active-button
+                        input(type="radio", name="delivery-option", id="delivery-button", checked)
+                        label(class="shopBasket-firstStep__button-label", for="delivery-button") Доставка
+                    .shopBasket-firstStep__delivery-button 
+                        input(type="radio", name="delivery-option", id="self-pickup-button")
+                        label(class="shopBasket-firstStep__button-label", for="self-pickup-button") Самовывоз
+                a(href="#", class="shopBasket-firstStep__refresh-button") Очистить корзину
+            .shopBasket-firstStep__goods-table
+                .shopBasket-firstStep__table-top 
+                    .shopBasket-firstStep__table-top-details Детали продукции
+                    .shopBasket-firstStep__table-top-quantity Количество
+                    .shopBasket-firstStep__table-top-total-cost Итоговая стоимость
+                .shopBasket-firstStep__table-row
+                    .shopBasket-firstStep__table-row-details 
+                        .shopBasket-firstStep__table-row-pic
+                            img(src="/src/static/img/goodsPic1.jpg") 
+                        .shopBasket-firstStep__table-row-description
+                            .shopBasket-firstStep__table-row-goods-specification 
+                                p.shopBasket-firstStep__table-row-goods-name Laberinto
+                                .shopBasket-firstStep__table-row-goods-cost 
+                                    p.shopBasket-firstStep__table-row-goods-real-cost <span>4010</span> р.
+                                    p.shopBasket-firstStep__table-row-goods-discount <span>3825</span> р.       
+                                p.shopBasket-firstStep__table-row-goods-affiliation Стеновые панели<a href="#">Cuba</a>
+                                button(type="button") Удалить
+                            .shopBasket-firstStep__table-row-goods-size <span>1200x600</span> мм
+                    .shopBasket-firstStep__table-row-counter
+                        a(href="#", class="shopBasket-firstStep__table-row-minus-btn") - 
+                        input(type="number", class="shopBasket-firstStep__table-row-counter-field")
+                        a(href="#", class="shopBasket-firstStep__table-row-plus-btn") +
+                    .shopBasket-firstStep__table-row-total-cost <span>30 600</span> р.
+                .shopBasket-firstStep__table-row
+                    .shopBasket-firstStep__table-row-details 
+                        .shopBasket-firstStep__table-row-pic
+                            img(src="/src/static/img/goodsPic2.jpg") 
+                        .shopBasket-firstStep__table-row-description
+                            .shopBasket-firstStep__table-row-goods-specification 
+                                p.shopBasket-firstStep__table-row-goods-name Original
+                                .shopBasket-firstStep__table-row-goods-cost 
+                                    p.shopBasket-firstStep__table-row-goods-real-cost <span>4010</span> р.
+                                    p.shopBasket-firstStep__table-row-goods-discount <span>3825</span> р.       
+                                p.shopBasket-firstStep__table-row-goods-affiliation Стеновые панели<a href="#">Cuba</a>
+                                button(type="button") Удалить
+                            .shopBasket-firstStep__table-row-goods-size <span>600x800</span> мм
+                    .shopBasket-firstStep__table-row-counter
+                        a(href="#", class="shopBasket-firstStep__table-row-minus-btn") - 
+                        input(type="number", class="shopBasket-firstStep__table-row-counter-field")
+                        a(href="#", class="shopBasket-firstStep__table-row-plus-btn") +
+                    .shopBasket-firstStep__table-row-total-cost <span>8 100</span> р.
+            .shopBasket-firstStep__bottom-block 
+                .shopBasket-firstStep__purchase-amount <span class="shopBasket-firstStep__purchase-amount-value">38 700</span>р.
+                .shopBasket-firstStep__delivery-block 
+                    p.shopBasket-firstStep__delivery-title Доставка
+                    span по городу Челябинск - от 350 р
+                    span по области- от 800 р
+                    span по России - от 1 300 р
+                    a(href="#") Подробнее о доставке и оплате
+                    button(href="#", type="button", class="shopBasket-firstStep__delivery-btn") продолжить покупки
+                .shopBasket-firstStep__mount-block 
+                    p.shopBasket-firstStep__mount-title Монтаж
+                    span Монтаж в среднем составляет +30% к стоимости заказа
+                    a(href="#") Подробнее о монтаже
+                    button(href="#", type="button", class="shopBasket-firstStep__mount-btn") оформить доставку

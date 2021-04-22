@@ -1,0 +1,377 @@
+html
+    box-sizing: border-box
+    scroll-behavior: smooth
+
+*
+    box-sizing: inherit
+
+    &::before, &::after
+    box-sizing: inherit
+
+body
+    max-width: 1920px
+    margin: 0px auto
+    font-family: 'Arial'
+    font-style: normal
+    font-size: 16px
+    line-height: 1.2
+    font-weight: normal
+    color: #010101
+    // overflow: hidden
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+
+.wrapper
+    max-width: 1920px
+    padding: 0 calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)))
+
+/* ШАПКА ИЗ СБОРКИ */
+.header
+    display: none
+
+.shopBasket-firstStep
+		&__title
+            padding-top: calc(41px + (81 - 41) * ((100vw - 320px) / (1920 - 320)))
+            padding-bottom: calc(57px + (97 - 57) * ((100vw - 320px) / (1920 - 320)))
+            font-style: normal
+            font-weight: bold
+            font-size: 32px
+            line-height: 37px
+            color: #0A0A0A
+            @media screen and ( max-width: 425px)
+                text-align: center
+		&__delivery-options
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: calc(30px + (72 - 30) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 550px)
+                flex-direction: column
+		&__buttons  
+            display: flex
+            padding: 4px
+            background: #E8E8E8
+            border-radius: 4px
+            @media screen and ( max-width: 550px)
+                margin-bottom: 20px
+		&__delivery-button
+            width: calc(165px + (295 - 165) * ((100vw - 320px) / (1920 - 320)))
+            border-radius: 4px
+            margin-right: 4px
+            color: #8D8D8D
+            transition: all .3s
+            @media screen and ( max-width: 374px)
+                width: calc(140px + (295 - 140) * ((100vw - 320px) / (1920 - 320)))
+            &:last-of-type
+                margin-right: 0px
+            input
+                display: none
+		&__button-label
+            padding: 18px 0
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+		&__refresh-button
+            font-size: 12px
+            text-decoration: underline
+            color: #666666
+		&__goods-table
+            width: 100%
+            margin-bottom: calc(30px + (49 - 30) * ((100vw - 320px) / (1920 - 320)))
+		&__table-top
+            display: flex
+            padding-bottom: 13px
+            border-bottom: 1px solid #1D1D1D
+		&__table-top-details
+            color: #000000
+            flex: 0 1 57.4%
+            @media screen and ( max-width: 740px)
+                flex-basis: 100%
+                text-align: center
+		&__table-top-quantity
+            color: #000000
+            flex: 0 1 16.4%
+            @media screen and ( max-width: 740px)
+                display: none
+		&__table-top-total-cost
+            color: #000000
+            flex: 0 1 23%
+            @media screen and ( max-width: 740px)
+                display: none
+		&__table-row
+            padding: 10px 0
+            display: flex
+            border-bottom: 1px solid #1D1D1D
+            @media screen and ( max-width: 740px)
+                position: relative
+                flex-direction: column
+                padding-bottom: 40px
+		&__table-row-details
+            display: flex
+            flex: 0 1 57.4%
+            @media screen and ( max-width: 740px)
+                margin: 0 auto
+                margin-bottom: 20px
+		&__table-row-pic
+            width: calc(165px + (285 - 165) * ((100vw - 320px) / (1920 - 320)))
+            height: calc(100px + (220 - 100) * ((100vw - 320px) / (1920 - 320)))
+            margin-right: calc(15px + (30 - 15) * ((100vw - 320px) / (1920 - 320)))
+            align-self: center
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+		&__table-row-description
+            display: flex
+            @media screen and ( max-width: 1386px)
+                flex-direction: column-reverse
+		&__table-row-goods-specification
+            margin-right: 20px
+            button
+                color: #1D1D1D
+                border: none
+                text-decoration: underline
+                background: #FFFFFF
+                padding: 0px
+                font-size: 16px
+                @media screen and ( max-width: 740px)
+                    position: absolute
+                    bottom: 10px
+                    left: 50%
+                    transform: translateX(-50%)
+		&__table-row-goods-name
+            padding-top: 21px
+            font-weight: bold
+            font-size: calc(20px + (64 - 20) * ((100vw - 320px) / (1920 - 320)))
+            line-height: calc(30px + (74 - 30) * ((100vw - 320px) / (1920 - 320)))
+            color: #1D1D1D
+            margin-bottom: 10px
+            @media screen and ( max-width: 1386px)
+                padding-top: 10px
+		&__table-row-goods-cost
+            display: flex
+            margin-bottom: 9px
+		&__table-row-goods-real-cost
+            font-weight: bold
+            color: #666666
+            text-decoration-line: line-through
+            margin-right: 10px
+            span
+                font-weight: bold
+		&__table-row-goods-discount
+            font-weight: bold
+            color: #000000
+            span
+                font-weight: bold
+		&__table-row-goods-affiliation
+            margin-bottom: calc(10px + (24 - 10) * ((100vw - 320px) / (1920 - 320)))
+            color: #8D8D8D 
+            a
+                color: #8D8D8D
+                margin-left: 5px
+		&__table-row-counter
+            flex: 0 1 16.4%
+            display: flex
+            align-items: center
+            @media screen and ( max-width: 740px)
+                margin: 0 auto
+                margin-bottom: 20px
+		&__table-row-minus-btn
+            color: #1D1D1D
+            margin-right: 3px
+            text-decoration: none
+		&__table-row-counter-field
+            padding-left: 13px
+            width: 50px
+            border: none
+            &:focus
+                outline: none
+		&__table-row-plus-btn
+            color: #1D1D1D
+            margin-left: 3px
+            text-decoration: none
+		&__table-row-total-cost
+            flex: 0 1 23%
+            display: flex
+            align-items: center
+            font-weight: bold
+            font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)))
+            line-height: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)))
+            color: #000000
+            @media screen and ( max-width: 740px)
+                margin: 0 auto
+            span
+                font-weight: bold
+                font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)))
+                line-height: calc(22px + (28 - 22) * ((100vw - 320px) / (1920 - 320)))
+                color: #000000
+                margin-right: 5px
+.shopBasket-firstStep
+		&__table-row-goods-size
+            padding-top: 32px
+            color: #8D8D8D
+            @media screen and ( max-width: 1386px)
+                padding-top: 0px
+
+.shopBasket-firstStep
+		&__bottom-block
+            max-width: 600px
+            display: flex
+            flex-wrap: wrap
+            margin-left: auto
+            padding-bottom: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 926px)
+                max-width: 100%
+		&__purchase-amount
+            flex: 0 0 100%
+            text-align: right
+            position: relative
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: 25px
+            color: #1D1D1D
+            @media screen and ( max-width: 550px)
+                max-width: 220px
+                margin: 0 auto
+                margin-bottom: 20px
+            &::before
+                content: 'Итог'
+                font-weight: bold
+                font-size: 32px
+                line-height: 37px
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                @media screen and ( max-width: 550px)
+                    content: 'Итог:'
+                    font-size: 30px
+                    line-height: 30px
+		&__purchase-amount-value
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            color: #1D1D1D
+            padding-right: 5px
+		&__delivery-block
+            flex: 0 1 47%
+            margin-right: 29px
+            display: flex
+            flex-direction: column
+            min-height: 229px
+            @media screen and ( max-width: 550px)
+                flex-basis: 100%
+                margin-right: 0px
+            span
+                font-style: italic
+                font-size: 16px
+                color: #1D1D1D
+                display: block
+                line-height: 150% 
+                @media screen and ( max-width: 550px)
+                    text-align: center
+            a
+                font-style: italic
+                text-decoration: none
+                display: block
+                color: #1E52C2
+                @media screen and ( max-width: 550px)
+                    margin: 0 auto
+		&__delivery-title
+            margin-bottom: 16px
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            color: #0A0A0A
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__delivery-btn
+            width: 100%
+            height: 58px
+            display: flex
+            color: #0A0A0A
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            outline: none
+            border: 1px solid #000000 
+            transition: all .3s
+            margin-top: auto
+            @media screen and ( max-width: 550px)
+                max-width: 200px
+                margin: 0 auto
+                margin-top: 20px
+            &:hover
+                background: #0A0A0A
+                color: #FFFFFF
+		&__mount-block
+            flex: 0 1 47%
+            min-height: 229px
+            display: flex
+            flex-direction: column
+            @media screen and ( max-width: 550px)
+                flex-basis: 100%
+            span
+                font-style: italic
+                font-size: 16px
+                color: #1D1D1D
+                display: block
+                line-height: 150%
+                @media screen and ( max-width: 550px)
+                    text-align: center 
+            a
+                font-style: italic
+                text-decoration: none
+                display: block
+                color: #1E52C2
+                @media screen and ( max-width: 550px)
+                    margin: 0 auto
+		&__mount-title
+            margin-bottom: 16px
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            color: #0A0A0A
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__mount-btn
+            width: 100%
+            height: 58px
+            display: flex
+            color: #0A0A0A
+            text-transform: uppercase
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #FFFFFF
+            outline: none
+            border: 1px solid #000000 
+            transition: all .3s
+            margin-top: auto
+            @media screen and ( max-width: 550px)
+                max-width: 200px
+                margin: 0 auto
+                margin-top: 20px
+            &:hover
+                background: #0A0A0A
+                color: #FFFFFF
+
+
+.active-button
+    background: #FFFFFF
+    .shopBasket-firstStep__button-label
+        color:  #1D1D1D
+/* ПОДВАЛ ИЗ СБОРКИ */
+.footer
+    display: none
+
+
+
