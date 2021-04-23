@@ -33,6 +33,8 @@ input[type="number"]::-webkit-inner-spin-button
 .header
     display: none
 
+/* КОРЗИНА. 1 СТРАНИЦА */
+
 .shopBasket-firstStep
 		&__title
             padding-top: calc(41px + (81 - 41) * ((100vw - 320px) / (1920 - 320)))
@@ -364,10 +366,340 @@ input[type="number"]::-webkit-inner-spin-button
                 background: #0A0A0A
                 color: #FFFFFF
 
+/* КОРЗИНА. 2 СТРАНИЦА */
+
+.shopBasket-secondStep
+    padding: calc(40px + (80 - 40) * ((100vw - 320px) / (1920 - 320))) 0
+.wrapper
+		&_secondStep
+            display: flex
+            justify-content: space-between
+            @media screen and ( max-width: 1023px)
+                flex-direction: column
+                max-width: 900px
+                margin: 0 auto
+.shopBasket-secondStep
+		&__form
+            display: flex
+            flex-direction: column
+            width: 50.25%
+            flex-shrink: 1
+            @media screen and ( max-width: 1023px)
+                flex-shrink: 0
+                width: 100%
+		&__form-title
+            font-weight: bold
+            font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1920 - 320)))
+            line-height: calc(29px + (37 - 29) * ((100vw - 320px) / (1920 - 320)))
+            color: #0A0A0A
+            margin-bottom: calc(30px + (97 - 30) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__form-buttons
+            align-self: flex-start
+            display: flex
+            padding: 4px
+            background: #E8E8E8
+            border-radius: 4px
+            margin-bottom: calc(30px + (100 - 30) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 550px)
+                align-self: center
+		&__identification-button
+            width: calc(165px + (295 - 165) * ((100vw - 320px) / (1920 - 320)))
+            border-radius: 4px
+            margin-right: 4px
+            color: #8D8D8D
+            transition: all .3s
+            @media screen and ( max-width: 550px)
+                width: calc(120px + (295 - 100) * ((120vw - 320px) / (1920 - 320)))
+            &:last-of-type
+                margin-right: 0px
+            input
+                display: none
+		&__button-label
+            padding: 18px 0
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+		&__form-field
+            position: relative
+            margin: 0 0 calc(30px + (50 - 30) * ((100vw - 320px) / (1920 - 320))) 0
+            &:nth-of-type(5)
+                margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)))
+            input, textarea
+                resize: none
+                background: #FFFFFF
+                width: 100%
+                padding: 20px 0
+                padding-left: 19px
+                color: #333
+                border: 1px solid #8D8D8D
+                outline: none
+                &:focus ~ span,
+                &:valid ~ span
+                    transform: translateY(-40px)
+                    font-size: 12px
+                    left: 0
+                    font-weight: 400
+                    letter-spacing: 1px
+                    color: #8D8D8D
+            span
+                position: absolute
+                left: 19px
+                padding: 20px 0
+                font-size: 16px
+                font-weight: normal
+                color: #8D8D8D
+                transition: .5s
+                pointer-events: none
+		&__form-checkbox
+            margin-bottom: calc(30px + (68 - 30) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 550px)
+                align-self: center
+            input
+                opacity: 0
+                z-index: -100
+                position: absolute
+                &:checked+label::before
+                    background: #FFFFFF
+                    background-image: url('/src/static/img/svg/checkboxIcon.svg')
+                    background-position: center
+                    background-repeat: no-repeat
+                    transition: all .2s
+            label
+                font-style: normal
+                font-weight: normal
+                font-size: 12px
+                line-height: 150%
+                color: #0A0A0A
+            input+label
+                user-select: none
+                display: flex
+                align-items: center
+                &::before
+                    content: ''
+                    display: inline-block
+                    width: 20px
+                    height: 20px
+                    border: 2px solid #BFBFBF
+                    border-radius: 4px
+                    margin-right: 10px
+                    transition: all .2s
+		&__form-headline
+            margin-bottom: calc(30px + (54 - 30) * ((100vw - 320px) / (1920 - 320)))
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__your-order
+            width: 40.05%
+            flex-grow: 1
+            margin-left: calc(20px + (141 - 20) * ((100vw - 1024px) / (1920 - 1024)))
+            align-self: start
+            padding: calc(10px + (47 - 10) * ((100vw - 320px) / (1920 - 320)))
+            padding-bottom: calc(30px + (75 - 30) * ((100vw - 320px) / (1920 - 320)))  
+            background: #F7F7F7
+            margin-right: calc(0px + (104 - 0) * ((100vw - 1024px) / (1920 - 1024)))
+            @media screen and ( max-width: 1023px)
+                flex-flow: 0
+                width: 100%
+                margin-left: 0px
+		&__your-order-title
+            font-weight: bold
+            font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1920 - 320)))
+            line-height: calc(29px + (37 - 29) * ((100vw - 320px) / (1920 - 320)))
+            color: #0A0A0A
+            margin-bottom: 35px
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__your-order-item
+            width: 100%
+            display: flex
+            justify-content: space-between
+            padding-bottom: 36px
+            border-bottom: 1px solid #1D1D1D
+            margin-bottom: 32px
+		&__your-order-item-name
+            display: inline-block
+            align-self: start
+            width: auto
+            text-decoration: none
+            color: #1D1D1D
+            line-height: 150%
+            position: relative
+            &::before
+                content: ''
+                opacity: 0
+                position: absolute
+                bottom: 2px
+                left: 0
+                transform: translateY(5px)
+                width: 100%
+                height: 1px
+                background: #1D1D1D
+                transition: all .2s
+            &:hover::before
+                opacity: 1
+                transform: translateY(0)
+		&__your-order-description
+            width: auto
+            display: inline-block
+		&__your-order-quantity
+            display: block
+            text-align: right
+            line-height: 150%
+            color: #1D1D1D
+            margin-bottom: 4px
+            &::after
+                content: 'шт'
+                transform: translateY(-50%)
+                line-height: 150%
+                color: #1D1D1D 
+                margin-left: 5px
+		&__your-order-cost
+            display: block
+            text-align: right
+            font-weight: bold
+            line-height: 18px
+            color: #1D1D1D
+            white-space: nowrap
+            &::after
+                content: 'р.'
+                transform: translateY(-50%)
+                line-height: 18px
+                font-weight: bold
+                color: #1D1D1D
+                margin-left: 5px
+		&__your-order-total
+            width: 100%
+            text-align: right
+            position: relative
+            font-weight: bold
+            font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1920 - 320)))
+            line-height: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)))
+            color: #1D1D1D
+            padding-bottom: 38px
+            border-bottom: 1px solid #1D1D1D
+            margin-bottom: 23px
+            &::before
+                content: 'Итого'
+                position: absolute
+                left: 0
+                top: calc(0px + (7 - 0) * ((100vw - 320px) / (1920 - 320)))
+                font-weight: bold
+                font-size: 16px
+                line-height: 18px
+                color: #1D1D1D
+            &::after
+                content: 'р.'
+                font-weight: bold
+		&__your-order-text
+            margin-top: 31px
+            line-height: 150%
+            color: #8D8D8D
+            a
+                color: #1D1D1D
+                text-decoration: none
+.shopBasket-secondStep
+		&__delivery-block
+            display: flex
+            padding-bottom: 21px
+            border-bottom: 1px solid #1D1D1D
+            margin-bottom: 50px
+            @media screen and ( max-width: 550px)
+                flex-direction: column
+.shopBasket-secondStep
+		&__submit-data
+            display: flex
+            justify-content: space-between
+            align-items: center
+            @media screen and ( max-width: 425px)
+                flex-direction: column
+		&__your-order-checkout
+            display: block
+            flex: 0 1 44.8%
+            height: 60px
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #0A0A0A
+            color: #FFFFFF
+            text-decoration: none
+            line-height: 150%
+            margin-right: 30px
+            @media screen and ( max-width: 1023px)
+                margin-right: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)))
+            @media screen and ( max-width: 425px)
+                margin-right: 0px
+                width: 200px
+                padding: 15px 0
+                margin-bottom: 20px
+		&__your-order-call-text
+            color: #1D1D1D
+            line-height: 150%
+            flex: 0 1 44.8%
+.shopBasket-firstStep
+		&__delivery-block
+			&_secondStep
+                min-height: auto
+                @media screen and ( max-width: 550px)
+                    margin-bottom: 20px
+		&__delivery-btn
+			&_second-step
+                display: none
+		&__mount-block
+			&_secondStep
+                min-height: auto
+		&__mount-btn
+			&_second-step
+                display: none
+
+/* КОРЗИНАЮ. 3 СТРАНИЦА */
+
+.pickup-adress
+		&__headline
+            font-weight: bold
+            font-size: 24px
+            line-height: 28px
+            color: #000000
+            margin-bottom: 31px
+            @media screen and ( max-width: 550px)
+                text-align: center
+		&__adress
+            margin-bottom: 26px
+            @media screen and ( max-width: 550px)
+                text-align: center
+            &:last-of-type
+                margin-bottom: 0px
+		&__object
+            line-height: 150%
+            color: #1D1D1D
+		&__location
+            line-height: 150%
+            color: #666666
+
+.pickup-adress
+    @media screen and ( max-width: 1023px)
+        margin-bottom: 40px
+
+
+
+
+
+
+
+
 
 .active-button
     background: #FFFFFF
     .shopBasket-firstStep__button-label
+        color:  #1D1D1D
+
+.active-button
+    background: #FFFFFF
+    .shopBasket-secondStep__button-label
         color:  #1D1D1D
 /* ПОДВАЛ ИЗ СБОРКИ */
 .footer

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header> 
+      <div class="header"> 
+        <ul class="nav"> 
+          <li> <a class="nav-link" href="">1</a></li>
+          <li> <a class="nav-link" href="">2</a></li>
+          <li> <a class="nav-link" href="">3</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="shopBasket-secondStep">
+      <div class="wrapper wrapper_secondStep">
+        <div class="shopBasket-secondStep__form"> 
+          <div class="shopBasket-secondStep__form-title">Корзина</div>
+          <div class="shopBasket-secondStep__form-buttons"> 
+            <div class="shopBasket-secondStep__identification-button active-button">
+              <input type="radio" name="identification-option" id="person-button" checked>
+              <label class="shopBasket-secondStep__button-label" for="person-button">Физическое лицо</label>
+            </div>
+            <div class="shopBasket-secondStep__identification-button"> 
+              <input type="radio" name="identification-option" id="entity-button">
+              <label class="shopBasket-secondStep__button-label" for="entity-button">Юридическое лицо</label>
+            </div>
+          </div>
+          <div class="shopBasket-secondStep__form-field">
+            <input type="text" required><span>Фамилия и имя*</span>
+          </div>
+          <div class="shopBasket-secondStep__form-field">
+            <input type="text" required><span>Почта</span>
+          </div>
+          <div class="shopBasket-secondStep__form-field">
+            <input type="text" required><span>Телефон*</span>
+          </div>
+          <div class="shopBasket-secondStep__form-checkbox">
+            <input type="checkbox" value id="marker">
+            <label for="marker">Я хочу получать рекламные сообщения и новости о товарах и услугах</label>
+          </div>
+          <div class="pickup-adress"> 
+            <p class="pickup-adress__headline">Адреса самовывоза</p>
+            <div class="pickup-adress__adress"> 
+              <p class="pickup-adress__object">Palazzo Stile & Decoro</p>
+              <p class="pickup-adress__location">г. Челябинск, Palazzo Stile & Decoro, ​Российская 142, м​2 этаж</p>
+            </div>
+            <div class="pickup-adress__adress"> 
+              <p class="pickup-adress__object">ТЦ Радуга</p>
+              <p class="pickup-adress__location">г. Челябинск, ул. Российская 194, 2 этаж</p>
+            </div>
+          </div>
+        </div>
+        <div class="shopBasket-secondStep__your-order">
+          <p class="shopBasket-secondStep__your-order-title">Ваш заказа</p>
+          <div class="shopBasket-secondStep__your-order-item"> <a class="shopBasket-secondStep__your-order-item-name" href="#">панель Laberinto 1200x600 мм, шпон лиственницы, масло  </a>
+            <div class="shopBasket-secondStep__your-order-description"><span class="shopBasket-secondStep__your-order-quantity">8</span><span class="shopBasket-secondStep__your-order-cost">30 600</span></div>
+          </div>
+          <div class="shopBasket-secondStep__your-order-item"> <a class="shopBasket-secondStep__your-order-item-name" href="#">панель Original 600x800 мм, шпон лиственницы, масло   </a>
+            <div class="shopBasket-secondStep__your-order-description"><span class="shopBasket-secondStep__your-order-quantity">27</span><span class="shopBasket-secondStep__your-order-cost">8 100</span></div>
+          </div>
+          <p class="shopBasket-secondStep__your-order-total">38 700</p>
+          <div class="shopBasket-secondStep__delivery-block"> 
+            <div class="shopBasket-firstStep__delivery-block shopBasket-firstStep__delivery-block_secondStep"> 
+              <p class="shopBasket-firstStep__delivery-title">Доставка</p><span>по городу Челябинск - от 350 р</span><span>по области- от 800 р</span><span>по России - от 1 300 р</span><a href="#">Подробнее о доставке и оплате</a>
+              <button class="shopBasket-firstStep__delivery-btn shopBasket-firstStep__delivery-btn_second-step" href="#" type="button">продолжить покупки</button>
+            </div>
+            <div class="shopBasket-firstStep__mount-block shopBasket-firstStep__mount-block_secondStep">
+              <p class="shopBasket-firstStep__mount-title">Монтаж</p><span>Монтаж в среднем составляет +30% к стоимости заказа</span><a href="#">Подробнее о монтаже</a>
+              <button class="shopBasket-firstStep__mount-btn shopBasket-firstStep__mount-btn_second-step" href="#" type="button">оформить доставку</button>
+            </div>
+          </div>
+          <div class="shopBasket-secondStep__submit-data"><a class="shopBasket-secondStep__your-order-checkout" href="#">оформить</a><span class="shopBasket-secondStep__your-order-call-text">С вами свяжется менеджер. Уточнит детали заказа, доставки и монтажа.</span></div>
+          <p class="shopBasket-secondStep__your-order-text">Нажимая кнопку, я даю <a href="#">согласие</a> на обработку персональных данных, в соответствии с <a href="#">Политикой</a>, и соглашаюсь с <a href="#">Правилами</a></p>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="footer"> 
+        <ul class="feedback"> 
+          <li> <a href=""></a></li>
+          <li> <a href=""></a></li>
+          <li> <a href=""></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/main.js"> </script>
+  </body>
+</html>

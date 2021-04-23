@@ -1,0 +1,64 @@
+extends ../layout/base
+
+block content
+    .shopBasket-secondStep
+        .wrapper.wrapper_secondStep
+            .shopBasket-secondStep__form 
+                .shopBasket-secondStep__form-title Корзина
+                .shopBasket-secondStep__form-buttons 
+                    .shopBasket-secondStep__identification-button.active-button
+                        input(type="radio", name="identification-option", id="person-button", checked)
+                        label(class="shopBasket-secondStep__button-label", for="person-button") Физическое лицо
+                    .shopBasket-secondStep__identification-button 
+                        input(type="radio", name="identification-option", id="entity-button")
+                        label(class="shopBasket-secondStep__button-label", for="entity-button") Юридическое лицо
+                .shopBasket-secondStep__form-field
+                    input(type="text" required)
+                    span Фамилия и имя*
+                .shopBasket-secondStep__form-field
+                    input(type="text" required)
+                    span Почта
+                .shopBasket-secondStep__form-field
+                    input(type="text" required)
+                    span Телефон*
+                .shopBasket-secondStep__form-checkbox
+                    input(type="checkbox" value id="marker")
+                    label(for="marker") Я хочу получать рекламные сообщения и новости о товарах и услугах
+                .pickup-adress 
+                    p.pickup-adress__headline Адреса самовывоза
+                    .pickup-adress__adress 
+                        p.pickup-adress__object Palazzo Stile & Decoro
+                        p.pickup-adress__location г. Челябинск, Palazzo Stile & Decoro, ​Российская 142, м​2 этаж
+                    .pickup-adress__adress 
+                        p.pickup-adress__object ТЦ Радуга
+                        p.pickup-adress__location г. Челябинск, ул. Российская 194, 2 этаж
+            .shopBasket-secondStep__your-order
+                p.shopBasket-secondStep__your-order-title Ваш заказа
+                .shopBasket-secondStep__your-order-item 
+                    a(href="#", class="shopBasket-secondStep__your-order-item-name") панель Laberinto 1200x600 мм, шпон лиственницы, масло  
+                    .shopBasket-secondStep__your-order-description
+                        span.shopBasket-secondStep__your-order-quantity 8
+                        span.shopBasket-secondStep__your-order-cost 30 600
+                .shopBasket-secondStep__your-order-item 
+                    a(href="#", class="shopBasket-secondStep__your-order-item-name") панель Original 600x800 мм, шпон лиственницы, масло   
+                    .shopBasket-secondStep__your-order-description
+                        span.shopBasket-secondStep__your-order-quantity 27
+                        span.shopBasket-secondStep__your-order-cost 8 100
+                p.shopBasket-secondStep__your-order-total 38 700
+                .shopBasket-secondStep__delivery-block 
+                    .shopBasket-firstStep__delivery-block.shopBasket-firstStep__delivery-block_secondStep 
+                        p.shopBasket-firstStep__delivery-title Доставка
+                        span по городу Челябинск - от 350 р
+                        span по области- от 800 р
+                        span по России - от 1 300 р
+                        a(href="#") Подробнее о доставке и оплате
+                        button(href="#", type="button", class="shopBasket-firstStep__delivery-btn shopBasket-firstStep__delivery-btn_second-step") продолжить покупки
+                    .shopBasket-firstStep__mount-block.shopBasket-firstStep__mount-block_secondStep
+                        p.shopBasket-firstStep__mount-title Монтаж
+                        span Монтаж в среднем составляет +30% к стоимости заказа
+                        a(href="#") Подробнее о монтаже
+                        button(href="#", type="button", class="shopBasket-firstStep__mount-btn shopBasket-firstStep__mount-btn_second-step") оформить доставку
+                .shopBasket-secondStep__submit-data
+                    a(href="#", class="shopBasket-secondStep__your-order-checkout") оформить
+                    span.shopBasket-secondStep__your-order-call-text С вами свяжется менеджер. Уточнит детали заказа, доставки и монтажа.
+                p.shopBasket-secondStep__your-order-text Нажимая кнопку, я даю <a href="#">согласие</a> на обработку персональных данных, в соответствии с <a href="#">Политикой</a>, и соглашаюсь с <a href="#">Правилами</a>
