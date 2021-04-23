@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <header> 
+      <div class="header"> 
+        <ul class="nav"> 
+          <li> <a class="nav-link" href="">1</a></li>
+          <li> <a class="nav-link" href="">2</a></li>
+          <li> <a class="nav-link" href="">3</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="shopBasket-firstStep">
+      <div class="wrapper"> 
+        <p class="shopBasket-firstStep__title">Корзина</p>
+        <div class="shopBasket-firstStep__delivery-options">
+          <div class="shopBasket-firstStep__buttons"> 
+            <div class="shopBasket-firstStep__delivery-button active-button">
+              <input type="radio" name="delivery-option" id="delivery-button" checked>
+              <label class="shopBasket-firstStep__button-label" for="delivery-button">Доставка</label>
+            </div>
+            <div class="shopBasket-firstStep__delivery-button"> 
+              <input type="radio" name="delivery-option" id="self-pickup-button">
+              <label class="shopBasket-firstStep__button-label" for="self-pickup-button">Самовывоз</label>
+            </div>
+          </div><a class="shopBasket-firstStep__refresh-button" href="#">Очистить корзину</a>
+        </div>
+        <div class="shopBasket-firstStep__goods-table">
+          <div class="shopBasket-firstStep__table-top"> 
+            <div class="shopBasket-firstStep__table-top-details">Детали продукции</div>
+            <div class="shopBasket-firstStep__table-top-quantity">Количество</div>
+            <div class="shopBasket-firstStep__table-top-total-cost">Итоговая стоимость</div>
+          </div>
+          <div class="shopBasket-firstStep__table-row">
+            <div class="shopBasket-firstStep__table-row-details"> 
+              <div class="shopBasket-firstStep__table-row-pic"><img src="/src/static/img/goodsPic1.jpg"></div>
+              <div class="shopBasket-firstStep__table-row-description">
+                <div class="shopBasket-firstStep__table-row-goods-specification"> 
+                  <p class="shopBasket-firstStep__table-row-goods-name">Laberinto</p>
+                  <div class="shopBasket-firstStep__table-row-goods-cost"> 
+                    <p class="shopBasket-firstStep__table-row-goods-real-cost"><span>4010</span> р.</p>
+                    <p class="shopBasket-firstStep__table-row-goods-discount"><span>3825</span> р.       </p>
+                  </div>
+                  <p class="shopBasket-firstStep__table-row-goods-affiliation">Стеновые панели<a href="#">Cuba</a></p>
+                  <button type="button">Удалить</button>
+                </div>
+                <div class="shopBasket-firstStep__table-row-goods-size"><span>1200x600</span> мм</div>
+              </div>
+            </div>
+            <div class="shopBasket-firstStep__table-row-counter"><a class="shopBasket-firstStep__table-row-minus-btn" href="#">- </a>
+              <input class="shopBasket-firstStep__table-row-counter-field" type="number"><a class="shopBasket-firstStep__table-row-plus-btn" href="#">+</a>
+            </div>
+            <div class="shopBasket-firstStep__table-row-total-cost"><span>30 600</span> р.</div>
+          </div>
+          <div class="shopBasket-firstStep__table-row">
+            <div class="shopBasket-firstStep__table-row-details"> 
+              <div class="shopBasket-firstStep__table-row-pic"><img src="/src/static/img/goodsPic2.jpg"></div>
+              <div class="shopBasket-firstStep__table-row-description">
+                <div class="shopBasket-firstStep__table-row-goods-specification"> 
+                  <p class="shopBasket-firstStep__table-row-goods-name">Original</p>
+                  <div class="shopBasket-firstStep__table-row-goods-cost"> 
+                    <p class="shopBasket-firstStep__table-row-goods-real-cost"><span>4010</span> р.</p>
+                    <p class="shopBasket-firstStep__table-row-goods-discount"><span>3825</span> р.       </p>
+                  </div>
+                  <p class="shopBasket-firstStep__table-row-goods-affiliation">Стеновые панели<a href="#">Cuba</a></p>
+                  <button type="button">Удалить</button>
+                </div>
+                <div class="shopBasket-firstStep__table-row-goods-size"><span>600x800</span> мм</div>
+              </div>
+            </div>
+            <div class="shopBasket-firstStep__table-row-counter"><a class="shopBasket-firstStep__table-row-minus-btn" href="#">- </a>
+              <input class="shopBasket-firstStep__table-row-counter-field" type="number"><a class="shopBasket-firstStep__table-row-plus-btn" href="#">+</a>
+            </div>
+            <div class="shopBasket-firstStep__table-row-total-cost"><span>8 100</span> р.</div>
+          </div>
+        </div>
+        <div class="shopBasket-firstStep__bottom-block"> 
+          <div class="shopBasket-firstStep__purchase-amount"><span class="shopBasket-firstStep__purchase-amount-value">38 700</span>р.</div>
+          <div class="shopBasket-firstStep__delivery-block"> 
+            <p class="shopBasket-firstStep__delivery-title">Доставка</p><span>по городу Челябинск - от 350 р</span><span>по области- от 800 р</span><span>по России - от 1 300 р</span><a href="#">Подробнее о доставке и оплате</a>
+            <button class="shopBasket-firstStep__delivery-btn" href="#" type="button">продолжить покупки</button>
+          </div>
+          <div class="shopBasket-firstStep__mount-block"> 
+            <p class="shopBasket-firstStep__mount-title">Монтаж</p><span>Монтаж в среднем составляет +30% к стоимости заказа</span><a href="#">Подробнее о монтаже</a>
+            <button class="shopBasket-firstStep__mount-btn" href="#" type="button">оформить доставку</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer> 
+      <div class="footer"> 
+        <ul class="feedback"> 
+          <li> <a href=""></a></li>
+          <li> <a href=""></a></li>
+          <li> <a href=""></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/main.js"> </script>
+  </body>
+</html>
