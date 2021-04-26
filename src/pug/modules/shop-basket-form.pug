@@ -1,0 +1,21 @@
+.shopBasket-secondStep__form-template 
+    .shopBasket-secondStep__form-title Корзина
+    .shopBasket-secondStep__form-buttons 
+        .shopBasket-secondStep__identification-button.active-button
+            input(type="radio", name="identification-option", id="person-button", checked)
+            label(class="shopBasket-secondStep__button-label", for="person-button") Физическое лицо
+        .shopBasket-secondStep__identification-button 
+            input(type="radio", name="identification-option", id="entity-button")
+            label(class="shopBasket-secondStep__button-label", for="entity-button") Юридическое лицо
+    .shopBasket-secondStep__form-field
+        input(type="text" required)
+        span Фамилия и имя*
+    .shopBasket-secondStep__form-field
+        input(type="text" required)
+        span Почта
+    .shopBasket-secondStep__form-field
+        input(type="text" required)
+        span Телефон*
+    .shopBasket-secondStep__form-checkbox
+        input(type="checkbox" value id="marker")
+        label(for="marker") Я хочу получать рекламные сообщения и новости о товарах и услугах
